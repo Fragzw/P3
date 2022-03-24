@@ -26,3 +26,21 @@ header {
 main {
     text-align: center;
 }
+
+img {
+    height: 115px;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    font-family: 'Shrikhand', cursive;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+footer span {
+    font-family: "Roboto";
+}
