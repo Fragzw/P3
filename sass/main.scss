@@ -1,3 +1,21 @@
 @import "./utils/_variables.scss";
 @import "./utils/functions";
 @import "./utils/mixins";
+
+.ville {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: lightgray;
+    text-align: center;
+    padding: 0.5rem;   
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &__text {
+        font-weight: 700;
+    }
+}

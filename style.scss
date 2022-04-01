@@ -1,21 +1,10 @@
 @import "./sass/base.scss";
 @import "./sass/layout/header.scss";
-
+@import "./sass/main.scss";
+@import "./sass/utils/variables";
 ul {
     list-style-type: none;
 }
-
-.ville {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background-color: lightgray;
-    text-align: center;
-    padding: 0.5rem;
-    
-}
-
 main .ville i {
     font-size: 1.5rem;
 }
