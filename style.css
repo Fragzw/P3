@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&family=Shrikhand&display=swap");
 *,
 ::before,
 ::after {
@@ -9,12 +7,13 @@
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0px 2px 0px red;
+  box-shadow: 0px 2px 0px darkgray;
   padding: 0, 3rem;
   margin: 0;
   position: relative;
@@ -26,12 +25,40 @@ header h1 {
   padding-bottom: 20px;
 }
 
+main {
+  text-align: center;
+}
+main .ville i {
+  font-size: 1rem;
+}
+
+.formulaire {
+  text-align: start;
+}
+.formulaire ol {
+  display: flex;
+  gap: 1rem;
+}
+.formulaire li {
+  background-color: #f6f6f6;
+  border-color: lightgrey;
+  box-shadow: 15px red;
+  transition: transform 0.3s;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 19px;
+  box-shadow: 2px 4px 8px -3px black;
+}
+.formulaire li:hover {
+  transform: scale(1.04);
+}
+
 .ville {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: lightgray;
+  background-color: lightgrey;
   text-align: center;
   padding: 0.5rem;
 }
@@ -42,16 +69,56 @@ header h1 {
   font-weight: 700;
 }
 
+.restaurant p {
+  padding-bottom: 10px;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.formulaire__list {
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 10px;
+}
+.formulaire__title {
+  padding-left: 30px;
+}
+
+.formulaire .text {
+  margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+  .formulaire ol {
+    flex-direction: column;
+  }
+}
+@media (min-width: 901px) {
+  .formulaire {
+    text-align: center;
+  }
+}
+.restaurant__btn {
+  color: white;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 0.8rem 1rem;
+  border: 0px;
+  box-shadow: 2px 4px 8px -3px black;
+  transition: transform 0.3 s;
+}
+
+.restaurant__btn:hover {
+  transform: scale(1.04);
+}
+
 ul {
   list-style-type: none;
-}
-
-main .ville i {
-  font-size: 1.5rem;
-}
-
-main {
-  text-align: center;
 }
 
 img {
@@ -64,13 +131,8 @@ footer {
   background-color: darkgray;
   color: white;
   padding-left: 20px;
-  font-family: "Shrikhand", cursive;
   padding-bottom: 20px;
   padding-top: 10px;
-}
-
-footer span {
-  font-family: "Roboto";
 }
 
 /*# sourceMappingURL=style.css.map */

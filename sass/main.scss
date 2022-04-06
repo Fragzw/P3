@@ -1,15 +1,39 @@
-@import "./utils/_variables.scss";
-@import "./utils/functions";
 @import "./utils/mixins";
+main {
+    text-align: center;
+    .ville i {
+        font-size: 1rem;
+    }
+}
+.formulaire {
+    text-align: start;
+    & ol {
+        display: flex;
+        gap: 1rem;
+    }
+    & li {
+        background-color: #f6f6f6;
+        border-color: lightgrey;
+        box-shadow: 15px red;
+        transition: transform 0.3s;
+        flex-grow: 1;
+        text-align: center;
+        border-radius: 19px;
+        @include base-shadow;
+        &:hover {
+            @include zoom;
+        }
+    }
+}
 
 .ville {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: lightgray;
+    background-color: lightgrey;
     text-align: center;
-    padding: 0.5rem;   
+    padding: 0.5rem;  
 
     &__icon {
         margin-right: 1rem;
@@ -18,4 +42,29 @@
     &__text {
         font-weight: 700;
     }
+}
+.restaurant p {
+    padding-bottom: 10px;
+}
+
+.restaurant {
+    background-color: #f6f6f6;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.formulaire {
+    &__list {
+    border: 1px solid grey;
+    padding: 20px;
+    
+    margin: 10px;
+    }
+    &__title {
+        padding-left: 30px;
+    }
+}
+
+.formulaire .text {
+    margin-left: 10px;
 }

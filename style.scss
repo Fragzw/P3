@@ -2,14 +2,12 @@
 @import "./sass/layout/header.scss";
 @import "./sass/main.scss";
 @import "./sass/utils/variables";
+@import "./sass/responsive.scss";
+@import "./sass/utils/btn.scss";
+@import "./sass/utils/mixins.scss";
+
 ul {
     list-style-type: none;
-}
-main .ville i {
-    font-size: 1.5rem;
-}
-main {
-    text-align: center;
 }
 
 img {
@@ -22,10 +20,6 @@ footer {
     background-color: darkgray;
     color: white;
     padding-left: 20px;
-    font-family: 'Shrikhand', cursive;
     padding-bottom: 20px;
     padding-top: 10px;
-}
-footer span {
-    font-family: "Roboto";
 }

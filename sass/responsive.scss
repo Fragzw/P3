@@ -1,0 +1,13 @@
+@media (max-width: 900px) {
+    .formulaire {
+        & ol {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width: 901px){
+    .formulaire {
+        text-align: center;
+    }
+}
