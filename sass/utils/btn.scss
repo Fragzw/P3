@@ -1,7 +1,7 @@
 @import "./mixins";
 .restaurant__btn {
     color: white;
-    background-image: linear-gradient(to top, rgba(147,86,220, 0.9), rgba(255, 121, 218, 0.9));
+    background-image: linear-gradient(to top, $colour-primary, $colour-secondary);
     font-weight: 600;
     border-radius: 2rem;
     padding: 0.8rem 1rem;

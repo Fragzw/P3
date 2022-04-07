@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 *,
 ::before,
 ::after {
@@ -5,52 +6,120 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
-  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer__list {
+  padding-left: 0;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer__listtxt {
+  margin: 0.5rem 0;
+}
+.footer__listtxt:first-child {
+  margin-top: 0;
+}
+.footer__listtxt:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 header {
-  font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0px 2px 0px darkgray;
-  padding: 0, 3rem;
-  margin: 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
+  font-size: 1rem;
 }
 
 header h1 {
-  margin-top: 30px;
+  font-family: "Shrikhand", cursive;
+  padding-top: 10px;
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  margin-top: 0;
 }
 
 main {
-  text-align: center;
+  display: block;
 }
 main .ville i {
   font-size: 1rem;
 }
 
 .formulaire {
+  position: relative;
+  counter-reset: numbers;
   text-align: start;
+  padding: 2rem 1rem;
 }
 .formulaire ol {
   display: flex;
   gap: 1rem;
+  padding-left: 20px;
 }
 .formulaire li {
+  list-style-type: none;
   background-color: #f6f6f6;
   border-color: lightgrey;
-  box-shadow: 15px red;
   transition: transform 0.3s;
   flex-grow: 1;
   text-align: center;
   border-radius: 19px;
   box-shadow: 2px 4px 8px -3px black;
 }
+.formulaire li::before {
+  content: counter(numbers);
+  counter-increment: numbers;
+  background-color: #9356DC;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 2px;
+}
 .formulaire li:hover {
   transform: scale(1.04);
+}
+.formulaire__icon {
+  color: #7e7e7e;
 }
 
 .ville {
@@ -58,15 +127,15 @@ main .ville i {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: lightgrey;
+  background-color: #e7e7e7;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1.2rem;
 }
 .ville__icon {
   margin-right: 1rem;
 }
 .ville__text {
-  font-weight: 700;
+  font-weight: 2rem;
 }
 
 .restaurant p {
@@ -77,6 +146,7 @@ main .ville i {
   background-color: #f6f6f6;
   padding-top: 20px;
   padding-bottom: 50px;
+  text-align: center;
 }
 
 .formulaire__list {
@@ -104,7 +174,7 @@ main .ville i {
 }
 .restaurant__btn {
   color: white;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
   font-weight: 600;
   border-radius: 2rem;
   padding: 0.8rem 1rem;
@@ -125,14 +195,6 @@ img {
   height: 115px;
   width: 100%;
   object-fit: cover;
-}
-
-footer {
-  background-color: darkgray;
-  color: white;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

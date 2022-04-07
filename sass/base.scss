@@ -5,7 +5,63 @@
 }
 
 body {
-    margin: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.footer {  
+    background-color: #353535;
+
+    .container { 
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    &__list {
+        padding-left: 0;
+    }
+
+    &__logo {
+        color: white;
+        font-family: "Shrikhand", cursive ;
+        margin: 0;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+
+    }
+
+    &__listtxt {
+        margin: 0.5rem 0;
+    
+        &:first-child {
+            margin-top: 0;
+          }
+
+        &:last-child {
+            margin-bottom: 0;
+          }
+    }  
+
+    &__link {
+        color: white;
+        text-decoration: none;
+    
+        &:hover {
+          text-decoration: underline;
+        }
+    }
+    
+    &__icon {
+        width: 1.2rem;
+        margin-right: 0.5rem;
+    }
 }

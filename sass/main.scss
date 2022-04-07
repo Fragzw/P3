@@ -1,20 +1,40 @@
 @import "./utils/mixins";
+@import "./utils/variables";
 main {
-    text-align: center;
+    display: block;
     .ville i {
         font-size: 1rem;
     }
 }
 .formulaire {
+    position: relative;
+    counter-reset: numbers;
     text-align: start;
+    padding: 2rem 1rem;
     & ol {
         display: flex;
         gap: 1rem;
+        padding-left: 20px;
     }
     & li {
+        &::before {
+            content: counter(numbers);
+            counter-increment: numbers;
+            background-color: $colour-primary;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            margin-left: -35px;
+            margin-top: 2px;
+        }
+        list-style-type: none;
         background-color: #f6f6f6;
         border-color: lightgrey;
-        box-shadow: 15px red;
         transition: transform 0.3s;
         flex-grow: 1;
         text-align: center;
@@ -24,6 +44,9 @@ main {
             @include zoom;
         }
     }
+    &__icon {
+        color: #7e7e7e;
+    }
 }
 
 .ville {
@@ -31,16 +54,16 @@ main {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: lightgrey;
+    background-color: #e7e7e7;
     text-align: center;
-    padding: 0.5rem;  
+    padding: 1.2rem;  
 
     &__icon {
         margin-right: 1rem;
     }
 
     &__text {
-        font-weight: 700;
+        font-weight: 2rem;
     }
 }
 .restaurant p {
@@ -51,6 +74,7 @@ main {
     background-color: #f6f6f6;
     padding-top: 20px;
     padding-bottom: 50px;
+    text-align: center;
 }
 
 .formulaire {

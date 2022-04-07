@@ -1,0 +1,120 @@
+main {
+  display: block;
+}
+
+main .ville i {
+  font-size: 1rem;
+}
+
+.formulaire {
+  position: relative;
+  counter-reset: numbers;
+  text-align: start;
+  padding: 2rem 1rem;
+}
+
+.formulaire ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  padding-left: 20px;
+}
+
+.formulaire li {
+  list-style-type: none;
+  background-color: #f6f6f6;
+  border-color: lightgrey;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  border-radius: 19px;
+  -webkit-box-shadow: 2px 4px 8px -3px black;
+          box-shadow: 2px 4px 8px -3px black;
+}
+
+.formulaire li::before {
+  content: counter(numbers);
+  counter-increment: numbers;
+  background-color: #9356DC;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 2px;
+}
+
+.formulaire li:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.formulaire__icon {
+  color: #7e7e7e;
+}
+
+.ville {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  background-color: #e7e7e7;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.ville__icon {
+  margin-right: 1rem;
+}
+
+.ville__text {
+  font-weight: 2rem;
+}
+
+.restaurant p {
+  padding-bottom: 10px;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.formulaire__list {
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 10px;
+}
+
+.formulaire__title {
+  padding-left: 30px;
+}
+
+.formulaire .text {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=main.css.map */
