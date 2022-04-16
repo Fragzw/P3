@@ -1,13 +1,42 @@
 @media (max-width: 900px) {
-    .formulaire {
-        & ol {
-            flex-direction: column;
-        }
+  .formulaire {
+    & ol {
+      flex-direction: column;
     }
+  }
 }
 
-@media (min-width: 901px){
-    .formulaire {
-        text-align: center;
+@media (min-width: 901px) {
+  .formulaire {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1074px) {
+  .section_restaurant__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .card {
+    max-width: 450px;
+    margin: 1rem;
+    margin-bottom: 3rem;
+
+    &__img {
+      max-width: 100%;
     }
+  }
+  .section_restaurants__title {
+    text-align: center;
+  }
+}
+
+@media (min-width:501px) and (max-width:1073px) {
+  .section_restaurant__cards {
+    article {
+      display: inherit;
+    }
+  }
 }

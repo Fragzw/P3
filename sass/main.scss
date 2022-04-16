@@ -1,5 +1,6 @@
 @import "./utils/mixins";
 @import "./utils/variables";
+
 main {
     display: block;
     .ville i {
@@ -20,7 +21,7 @@ main {
         &::before {
             content: counter(numbers);
             counter-increment: numbers;
-            background-color: $colour-primary;
+            background-color: $color-primary;
             width: 1.5rem;
             height: 1.5rem;
             display: flex;
@@ -54,20 +55,17 @@ main {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #e7e7e7;
+    background-color: #f3f3f3;
     text-align: center;
     padding: 1.2rem;  
 
     &__icon {
-        margin-right: 1rem;
+        margin-right: 1.5rem;
     }
 
     &__text {
-        font-weight: 2rem;
+        font-size: 1rem
     }
-}
-.restaurant p {
-    padding-bottom: 10px;
 }
 
 .restaurant {

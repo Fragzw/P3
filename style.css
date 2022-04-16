@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 *,
 ::before,
@@ -6,20 +7,22 @@
 }
 
 body {
-  margin: 0;
-  display: flex;
+  margin: 0px;
+  margin: 0 auto;
+  max-width: 1280px;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
 }
 
-.container {
-  max-width: 1200px;
-  position: relative;
-  margin: auto;
+a {
+  color: black;
+  text-decoration: none;
+  width: 450px;
 }
 
 .footer {
   background-color: #353535;
+  padding: 1rem 2rem;
 }
 .footer .container {
   display: flex;
@@ -28,6 +31,7 @@ body {
 }
 .footer__list {
   padding-left: 0;
+  list-style: none;
 }
 .footer__logo {
   color: white;
@@ -58,18 +62,12 @@ body {
 }
 
 header {
+  font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
-  font-size: 1rem;
-}
-
-header h1 {
-  font-family: "Shrikhand", cursive;
-  padding-top: 10px;
-  margin-bottom: 0;
-  padding-bottom: 10px;
-  margin-top: 0;
+  padding: 0.3rem;
+  margin: 0;
 }
 
 main {
@@ -127,19 +125,15 @@ main .ville i {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: #e7e7e7;
+  background-color: #f3f3f3;
   text-align: center;
   padding: 1.2rem;
 }
 .ville__icon {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 .ville__text {
-  font-weight: 2rem;
-}
-
-.restaurant p {
-  padding-bottom: 10px;
+  font-size: 1rem;
 }
 
 .restaurant {
@@ -172,6 +166,32 @@ main .ville i {
     text-align: center;
   }
 }
+@media screen and (min-width: 1074px) {
+  .section_restaurant__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    max-width: 450px;
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+  .card__img {
+    max-width: 100%;
+  }
+
+  .section_restaurants__title {
+    text-align: center;
+  }
+}
+@media (min-width: 501px) and (max-width: 1073px) {
+  .section_restaurant__cards article {
+    display: inherit;
+  }
+}
 .restaurant__btn {
   color: white;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
@@ -187,14 +207,241 @@ main .ville i {
   transform: scale(1.04);
 }
 
-ul {
-  list-style-type: none;
+.restaurant p {
+  padding-bottom: 10px;
+}
+
+.section_restaurants {
+  padding: 0 5vw;
+  background-color: #f6f6f6;
+  align-items: center;
+}
+.section_restaurants__title {
+  align-self: start;
+  padding-top: 40px;
+}
+
+.card {
+  height: fit-content;
+  flex: 100%;
+  margin: 3vw 0px 15px;
+  background-color: white;
+  display: flex;
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 20px 20px;
+  height: fit-content;
+  overflow: hidden;
+  width: 90vw;
+  padding: f0px;
+}
+.card__img {
+  position: relative;
+  width: 90vw;
+}
+.card__img img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+.card__img__new {
+  font-weight: bold;
+  z-index: 1;
+  background-color: #99e2d0;
+  color: #1a8a68;
+  width: 80px;
+  display: block;
+  text-align: center;
+  right: 1em;
+  top: 1em;
+  position: absolute;
+  height: 2.5em;
+  /* hauteur du parent */
+  line-height: 0.7em;
+  /* hauteur de ligne (identique) */
+  white-space: nowrap;
+  /* interdiction de passer à la ligne */
+  border-radius: 5%;
+}
+.card__caption {
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+}
+.card__caption__text {
+  padding: 0 1rem;
+  border-bottom-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+}
+.card__caption__text p {
+  font-weight: lighter;
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+.card__caption__text h4 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+.card__caption__hrt {
+  padding: 0px;
+  position: relative;
+  bottom: 10px;
+}
+
+.section_restaurant__cards {
+  padding-bottom: 50px;
 }
 
 img {
-  height: 115px;
   width: 100%;
+  height: 52vh;
+  /* mettre en responsiv et changer valeur pour plu grand format */
   object-fit: cover;
+  display: block;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+article {
+  height: 70%;
+}
+
+/* à travailler */
+@media (max-width: 450px) {
+  .menu__titre {
+    border-radius: 40%;
+    position: relative;
+    margin-top: -5%;
+  }
+
+  body {
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+}
+/* à travailler */
+/* main page menu */
+.menu__main {
+  padding: 0px 10px;
+}
+.menu__main h2 {
+  font-family: "Shrikhand", "Roboto", "Sans-serif";
+}
+
+.menu__main {
+  background-color: #f6f6f6;
+}
+
+/* entrées */
+.menu__main__entree {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.entree1,
+.entree2,
+.entree3,
+.entree4 {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.entree1__infos,
+.entree2__infos,
+.entree3__infos,
+.entree4__infos {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.entree1__infos__txt__prix,
+.entree2__infos__txt__prix,
+.entree3__infos__txt__prix,
+.entree4__infos__txt__prix {
+  margin-top: auto;
+}
+
+/* plat */
+.menu__main__plat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plat1,
+.plat2,
+.plat3 {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.plat1__infos,
+.plat2__infos,
+.plat3__infos {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.plat1__infos__txt__prix,
+.plat2__infos__txt__prix,
+.plat3__infos__txt__prix {
+  margin-top: auto;
+}
+
+/* dessert */
+.menu__main__dessert {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dessert1,
+.dessert2,
+.dessert3 {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.dessert1__infos,
+.dessert2__infos,
+.dessert3__infos {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.dessert1__infos__txt__prix,
+.dessert2__infos__txt__prix,
+.dessert3__infos__txt__prix {
+  margin-top: auto;
+}
+
+.btn__commander {
+  color: white;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 4rem auto;
+  border-radius: 30px;
+  border: unset;
+  cursor: pointer;
+  box-shadow: 2px 4px 8px -3px black;
+  transition: transform 0.3 s;
+}
+
+.btn__commander:hover {
+  transform: scale(1.04);
+}
+
+.btn {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

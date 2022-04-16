@@ -1,7 +1,7 @@
 @import "./mixins";
 .restaurant__btn {
     color: white;
-    background-image: linear-gradient(to top, $colour-primary, $colour-secondary);
+    background-image: linear-gradient(to top, $color-primary, $color-secondary);
     font-weight: 600;
     border-radius: 2rem;
     padding: 0.8rem 1rem;
@@ -12,4 +12,8 @@
 
 .restaurant__btn:hover {
     transform: scale(1.04);
+}
+
+.restaurant p {
+    padding-bottom: 10px;
 }

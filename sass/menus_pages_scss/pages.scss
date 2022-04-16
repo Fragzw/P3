@@ -1,0 +1,160 @@
+img {
+    width: 100%;
+    height: 52vh;
+    /* mettre en responsiv et changer valeur pour plu grand format */
+    object-fit: cover;
+    display: block;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+article {
+    height: 70%;
+}
+
+/* à travailler */
+
+@media (max-width: 450px) {
+    .menu__titre {
+        border-radius: 40%;
+        position: relative;
+        margin-top: -5%;
+    }
+    body {
+        width: 100%;
+        background-color: #f6f6f6;
+
+    }
+}
+
+
+
+
+/* à travailler */
+
+
+
+
+
+/* main page menu */
+
+.menu__main {
+    padding: 0px 10px;
+
+    h2 {
+        font-family: "Shrikhand", "Roboto", "Sans-serif";
+    }
+}
+
+.menu__main {
+    background-color: #f6f6f6;
+}
+
+/* entrées */
+
+.menu__main__entree {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.entree1,
+.entree2,
+.entree3,
+.entree4 {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.entree1__infos,
+.entree2__infos,
+.entree3__infos,
+.entree4__infos {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    &__txt__prix {
+        margin-top: auto;
+    }
+}
+
+/* plat */
+
+.menu__main__plat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plat1,
+.plat2,
+.plat3 {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.plat1__infos,
+.plat2__infos,
+.plat3__infos {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    &__txt__prix {
+        margin-top: auto;
+    }
+}
+
+/* dessert */
+
+.menu__main__dessert {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dessert1,
+.dessert2,
+.dessert3 {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.dessert1__infos,
+.dessert2__infos,
+.dessert3__infos {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    &__txt__prix {
+        margin-top: auto;
+    }
+}
+
+.btn__commander {
+    color: white;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    background: linear-gradient($color-secondary, $color-primary);
+    margin: 4rem auto;
+    border-radius: 30px;
+    border: unset;
+    cursor: pointer;
+    @include base-shadow;
+    transition: transform 0.3 s;
+}
+
+.btn__commander:hover {
+    transform: scale(1.04);
+}
+
+.btn {
+    display: flex;
+}

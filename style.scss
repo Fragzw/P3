@@ -7,13 +7,4 @@
 @import "./sass/utils/btn.scss";
 @import "./sass/utils/mixins.scss";
 @import "./sass/menus.scss";
-
-ul {
-    list-style-type: none;
-}
-
-img {
-    height: 115px;
-    width: 100%;
-    object-fit: cover;
-}
+@import "./sass/menus_pages_scss/pages.scss";
