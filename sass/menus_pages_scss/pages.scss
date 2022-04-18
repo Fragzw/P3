@@ -3,11 +3,16 @@ img {
     height: 52vh;
     /* mettre en responsiv et changer valeur pour plu grand format */
     object-fit: cover;
-    display: block;
 }
-
+/* visuel titres */
+.underline-title {
+    background-color: $color-underline;
+    height: 0.3em;
+    width: 40px;
+}
 h3 {
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 article {
@@ -29,6 +34,35 @@ article {
     }
 }
 
+@media (min-width:872px) {
+    .menu__main {
+        &__entree {
+            width: 30%;
+        }
+        &__plat {
+            width: 30%;
+        }
+        &__dessert {
+            width: 30%;
+        }
+    }
+    .footer {
+        &__logo {
+         text-align: center;
+        }
+        &__list {
+            text-align: center;
+        }
+    }
+    .menu__main {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
 
 
 
@@ -40,15 +74,30 @@ article {
 
 /* main page menu */
 
+main {
+    background-color: $color-background;
+}
+
+.menu__titre {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5vw;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    transform: translateY(-70px);
+    background-color: $color-background;
+    font-family: "shrikhand", "Sans-serif";
+    margin-bottom: -60px;
+}
+
 .menu__main {
     padding: 0px 10px;
-
     h2 {
         font-family: "Shrikhand", "Roboto", "Sans-serif";
     }
 }
 
-.menu__main {
+.menu__page {
     background-color: #f6f6f6;
 }
 
@@ -158,3 +207,8 @@ article {
 .btn {
     display: flex;
 }
+
+
+
+
+
