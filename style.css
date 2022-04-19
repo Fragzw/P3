@@ -301,16 +301,36 @@ img {
   object-fit: cover;
 }
 
+p {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
 /* visuel titres */
+.h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+  margin: 20px 0 0 10px;
+}
+.h4__infos {
+  font-weight: normal;
+}
+
 .underline-title {
   background-color: #99e2d0;
   height: 0.3em;
   width: 40px;
+  margin: 0 1rem;
 }
 
 h3 {
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin: 0 1rem 0.5rem;
 }
 
 article {
@@ -331,31 +351,24 @@ article {
   }
 }
 @media (min-width: 872px) {
-  .menu__main__entree {
-    width: 30%;
-  }
-  .menu__main__plat {
-    width: 30%;
-  }
-  .menu__main__dessert {
-    width: 30%;
-  }
-
-  .footer__logo {
-    text-align: center;
-  }
-  .footer__list {
-    text-align: center;
-  }
-
-  .menu__main {
+  .menu__entree .menu__plat .menu__dessert {
     display: flex;
-    justify-content: center;
-    gap: 5rem;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entree1,
+.entree2,
+.entree3 {
+    width: 95%;
   }
 }
+.entree__infos__txt__choix {
+  background-color: #99E2D0;
+  border: 1px solid black;
+  width: 10px;
+}
+
 /* à travailler */
 /* main page menu */
 main {
@@ -386,33 +399,128 @@ main {
 }
 
 /* entrées */
+.entree1,
+.entree2,
+.entree3 {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px lightgrey;
+  margin-top: 20px;
+  height: 4.5rem;
+}
+
+.menu__entree {
+  position: relative;
+  margin: 0px 15px 30px 15px;
+}
+
+.entree__txt {
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.entree__txt h4 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: larger;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.entree__txt__detail {
+  flex: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.entree__txt__detail p {
+  margin-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.entree__txt__detail__ingredient {
+  text-overflow: ellipsis;
+}
+.entree__txt__detail__prix {
+  font-weight: bold;
+}
+
 .menu__main__entree {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.entree1,
-.entree2,
-.entree3,
-.entree4 {
-  border: 1px solid black;
+.entree {
   border-radius: 20px;
   background-color: white;
+  margin: 1rem;
+  box-shadow: 2px 2px 2px lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.entree__prix {
+  font-weight: bold;
+  padding: 38px 15px 0 15px;
 }
 
-.entree1__infos,
-.entree2__infos,
-.entree3__infos,
-.entree4__infos {
+/* quand text rogné fait apparaitre "..." */
+.entree:hover > .entree__check {
+  flex: 10%;
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
+}
+
+/* cartes check */
+.entree:hover > .entree__check {
+  flex: 5%;
+}
+
+.entree__check {
+  overflow: hidden;
+  text-align: center;
+  background: #99E2D0;
+  width: 0;
+  align-items: center;
+  transition: 1s;
+  padding-top: 25px;
+}
+
+.entree1:hover .entree__check {
+  width: 70px;
+}
+
+.entree2:hover .entree__check {
+  width: 70px;
+}
+
+.entree3:hover .entree__check {
+  width: 70px;
+}
+
+.valid {
+  display: inline-block;
+  margin: auto;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* cartes check */
+.entree__infos {
   display: flex;
   padding: 10px;
   justify-content: space-between;
 }
-.entree1__infos__txt__prix,
-.entree2__infos__txt__prix,
-.entree3__infos__txt__prix,
-.entree4__infos__txt__prix {
+.entree__infos__txt__prix {
   margin-top: auto;
 }
 
@@ -420,27 +528,21 @@ main {
 .menu__main__plat {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.plat1,
-.plat2,
-.plat3 {
-  border: 1px solid black;
+.plat {
   border-radius: 20px;
   background-color: white;
+  margin: 1rem;
+  box-shadow: 2px 2px 2px lightgrey;
 }
 
-.plat1__infos,
-.plat2__infos,
-.plat3__infos {
+.plat__infos {
   display: flex;
   padding: 10px;
   justify-content: space-between;
 }
-.plat1__infos__txt__prix,
-.plat2__infos__txt__prix,
-.plat3__infos__txt__prix {
+.plat__infos__txt__prix {
   margin-top: auto;
 }
 
@@ -448,30 +550,16 @@ main {
 .menu__main__dessert {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.dessert1,
-.dessert2,
-.dessert3 {
-  border: 1px solid black;
+.dessert {
   border-radius: 20px;
   background-color: white;
+  margin: 1rem;
+  box-shadow: 2px 2px 2px lightgrey;
 }
 
-.dessert1__infos,
-.dessert2__infos,
-.dessert3__infos {
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-}
-.dessert1__infos__txt__prix,
-.dessert2__infos__txt__prix,
-.dessert3__infos__txt__prix {
-  margin-top: auto;
-}
-
+/* bouton commander */
 .btn__commander {
   color: white;
   padding: 1.5rem 3rem;

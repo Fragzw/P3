@@ -4,15 +4,39 @@ img {
     /* mettre en responsiv et changer valeur pour plu grand format */
     object-fit: cover;
 }
+
+p {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
 /* visuel titres */
+
+.h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    margin: 20px 0 0 10px;
+
+    &__infos {
+        font-weight: normal;
+    }
+}
+
 .underline-title {
     background-color: $color-underline;
     height: 0.3em;
     width: 40px;
+    margin: 0 1rem;
 }
+
 h3 {
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin: 0 1rem 0.5rem;
 }
 
 article {
@@ -27,6 +51,7 @@ article {
         position: relative;
         margin-top: -5%;
     }
+
     body {
         width: 100%;
         background-color: #f6f6f6;
@@ -35,36 +60,25 @@ article {
 }
 
 @media (min-width:872px) {
-    .menu__main {
-        &__entree {
-            width: 30%;
-        }
-        &__plat {
-            width: 30%;
-        }
-        &__dessert {
-            width: 30%;
-        }
-    }
-    .footer {
-        &__logo {
-         text-align: center;
-        }
-        &__list {
-            text-align: center;
-        }
-    }
-    .menu__main {
+    .menu__entree .menu__plat .menu__dessert {
         display: flex;
-        justify-content: center;
-        gap: 5rem;
-        margin-left: 20px;
-        margin-right: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .entree1,
+    .entree2,
+    .entree3 {
+        width: 95%;
     }
 }
 
 
-
+.entree__infos__txt__choix {
+    background-color: $color-third;
+    border: 1px solid black;
+    width: 10px
+}
 
 /* à travailler */
 
@@ -92,6 +106,7 @@ main {
 
 .menu__main {
     padding: 0px 10px;
+
     h2 {
         font-family: "Shrikhand", "Roboto", "Sans-serif";
     }
@@ -103,25 +118,138 @@ main {
 
 /* entrées */
 
+.entree1,
+.entree2,
+.entree3 {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 15px;
+    @include page-shadow;
+    margin-top: 20px;
+    height: 4.5rem;
+}
+
+.menu__entree {
+    position: relative;
+    margin: 0px 15px 30px 15px;
+}
+
+
+
+.entree__txt {
+    display: flex;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    h4 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: larger;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__detail {
+        flex: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+            margin-top: 2px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        &__ingredient {
+            text-overflow: ellipsis;
+        }
+
+        &__prix {
+            font-weight: bold;
+        }
+    }
+}
+
 .menu__main__entree {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.entree1,
-.entree2,
-.entree3,
-.entree4 {
-    border: 1px solid black;
+.entree {
     border-radius: 20px;
     background-color: white;
+    margin: 1rem;
+    @include page-shadow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &__prix {
+        font-weight: bold;
+        padding: 38px 15px 0 15px;
+    }
 }
 
-.entree1__infos,
-.entree2__infos,
-.entree3__infos,
-.entree4__infos {
+/* quand text rogné fait apparaitre "..." */
+
+
+.entree:hover>.entree__check {
+    flex: 10%;
+    transform: translateX(0px);
+    background-color: #99e2d0;
+    cursor: pointer;
+    color: #f6f6f6;
+}
+
+/* cartes check */
+
+.entree:hover>.entree__check {
+    flex: 5%;
+}
+
+.entree {
+    &__check {
+        overflow: hidden;
+        text-align: center;
+        background: $color-third;
+        width: 0;
+        align-items: center;
+        transition: 1s;
+        padding-top: 25px;
+    }
+}
+
+.entree1:hover .entree__check {
+    width: 70px;
+}
+
+.entree2:hover .entree__check {
+    width: 70px;
+}
+
+.entree3:hover .entree__check {
+    width: 70px;
+}
+
+.valid {
+    display: inline-block;
+    margin: auto;
+    color: #fff;
+    font-size: 25px;
+}
+
+
+/* cartes check */
+
+.entree__infos {
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -136,20 +264,17 @@ main {
 .menu__main__plat {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.plat1,
-.plat2,
-.plat3 {
-    border: 1px solid black;
+.plat {
     border-radius: 20px;
     background-color: white;
+    margin: 1rem;
+    @include page-shadow;
 }
 
-.plat1__infos,
-.plat2__infos,
-.plat3__infos {
+
+.plat__infos {
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -164,29 +289,17 @@ main {
 .menu__main__dessert {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.dessert1,
-.dessert2,
-.dessert3 {
-    border: 1px solid black;
+
+.dessert {
     border-radius: 20px;
     background-color: white;
+    margin: 1rem;
+    @include page-shadow;
 }
 
-.dessert1__infos,
-.dessert2__infos,
-.dessert3__infos {
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-
-    &__txt__prix {
-        margin-top: auto;
-    }
-}
-
+/* bouton commander */
 .btn__commander {
     color: white;
     padding: 1.5rem 3rem;
@@ -207,8 +320,3 @@ main {
 .btn {
     display: flex;
 }
-
-
-
-
-

@@ -5,3 +5,7 @@
 @mixin zoom {
     transform: scale(1.04);
 }
+
+@mixin page-shadow {
+    box-shadow: 2px 2px 2px lightgrey;
+}
