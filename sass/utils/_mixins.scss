@@ -9,3 +9,10 @@
 @mixin page-shadow {
     box-shadow: 2px 2px 2px lightgrey;
 }
+
+@mixin heart-hover {
+    background: linear-gradient(to bottom left, $color-primary, $color-secondary );
+    font-size: large;
+    transform: scale(2);
+    -webkit-background-clip: text;
+}

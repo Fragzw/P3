@@ -186,6 +186,10 @@ main .ville i {
   .section_restaurants__title {
     text-align: center;
   }
+
+  .footer {
+    text-align: center;
+  }
 }
 @media (min-width: 501px) and (max-width: 1073px) {
   .section_restaurant__cards article {
@@ -290,11 +294,17 @@ main .ville i {
   bottom: 10px;
 }
 
+.card:hover {
+  transform: scale(1.04);
+}
+
 .section_restaurant__cards {
   padding-bottom: 50px;
 }
 
-#pages_body p {
+#pages_body .entree__prix,
+#pages_body .plat__prix,
+#pages_body .dessert__prix {
   margin: 0;
 }
 #pages_body img {
@@ -332,43 +342,6 @@ article {
   height: 70%;
 }
 
-/* à travailler */
-@media (max-width: 450px) {
-  body {
-    width: 100%;
-    background-color: #f6f6f6;
-  }
-}
-@media (min-width: 872px) {
-  .menu__entree,
-.menu__plat,
-.menu__dessert {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 5vw;
-  }
-
-  .entree1,
-.entree2,
-.entree3,
-.entree4 {
-    width: 95%;
-  }
-
-  .plat1,
-.plat2,
-.plat3 {
-    width: 95%;
-  }
-
-  .dessert1,
-.dessert2,
-.dessert3 {
-    width: 95%;
-  }
-}
-/* à travailler */
 /* main page menu */
 main {
   background-color: #f6f6f6;
@@ -660,6 +633,71 @@ main {
 
 .btn {
   display: flex;
+}
+
+/* coeur page */
+.fa-stack {
+  font-size: x-large;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack :nth-child(2) {
+  color: transparent;
+  padding: 0px;
+}
+
+.fa-stack :nth-child(2):hover {
+  background: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  font-size: large;
+  transform: scale(2);
+  -webkit-background-clip: text;
+}
+
+/* media queries */
+@media (max-width: 450px) {
+  body {
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+}
+@media (min-width: 872px) {
+  .menu__entree,
+.menu__plat,
+.menu__dessert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 5vw;
+  }
+
+  .menu .menu__titre {
+    display: flex;
+    justify-content: center;
+  }
+
+  .entree1,
+.entree2,
+.entree3,
+.entree4 {
+    width: 95%;
+  }
+
+  .plat1,
+.plat2,
+.plat3 {
+    width: 95%;
+  }
+
+  .dessert1,
+.dessert2,
+.dessert3 {
+    width: 95%;
+  }
+
+  .footer {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
