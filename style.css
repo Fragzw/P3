@@ -294,19 +294,14 @@ main .ville i {
   padding-bottom: 50px;
 }
 
-img {
+#pages_body p {
+  margin: 0;
+}
+#pages_body img {
   width: 100%;
   height: 52vh;
   /* mettre en responsiv et changer valeur pour plu grand format */
   object-fit: cover;
-}
-
-p {
-  margin: 0;
-}
-
-h4 {
-  margin: 0;
 }
 
 /* visuel titres */
@@ -339,22 +334,19 @@ article {
 
 /* à travailler */
 @media (max-width: 450px) {
-  .menu__titre {
-    border-radius: 40%;
-    position: relative;
-    margin-top: -5%;
-  }
-
   body {
     width: 100%;
     background-color: #f6f6f6;
   }
 }
 @media (min-width: 872px) {
-  .menu__entree .menu__plat .menu__dessert {
+  .menu__entree,
+.menu__plat,
+.menu__dessert {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px 5vw;
   }
 
   .entree1,
@@ -362,13 +354,19 @@ article {
 .entree3 {
     width: 95%;
   }
-}
-.entree__infos__txt__choix {
-  background-color: #99E2D0;
-  border: 1px solid black;
-  width: 10px;
-}
 
+  .plat1,
+.plat2,
+.plat3 {
+    width: 95%;
+  }
+
+  .dessert1,
+.dessert2,
+.dessert3 {
+    width: 95%;
+  }
+}
 /* à travailler */
 /* main page menu */
 main {
@@ -418,42 +416,7 @@ main {
   margin: 0px 15px 30px 15px;
 }
 
-.entree__txt {
-  display: flex;
-  flex-direction: column;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.entree__txt h4 {
-  margin-bottom: 0px;
-  margin-top: 0px;
-  font-size: larger;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.entree__txt__detail {
-  flex: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.entree__txt__detail p {
-  margin-top: 2px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.entree__txt__detail__ingredient {
-  text-overflow: ellipsis;
-}
-.entree__txt__detail__prix {
-  font-weight: bold;
-}
-
-.menu__main__entree {
-  display: flex;
-  flex-direction: column;
-}
-
+/* inspecter voir quoi changer */
 .entree {
   border-radius: 20px;
   background-color: white;
@@ -471,7 +434,7 @@ main {
   padding: 38px 15px 0 15px;
 }
 
-/* quand text rogné fait apparaitre "..." */
+/* cartes check ENTREE */
 .entree:hover > .entree__check {
   flex: 10%;
   transform: translateX(0px);
@@ -480,7 +443,6 @@ main {
   color: #f6f6f6;
 }
 
-/* cartes check */
 .entree:hover > .entree__check {
   flex: 5%;
 }
@@ -491,7 +453,7 @@ main {
   background: #99E2D0;
   width: 0;
   align-items: center;
-  transition: 1s;
+  transition: 0.5s;
   padding-top: 25px;
 }
 
@@ -514,20 +476,24 @@ main {
   font-size: 25px;
 }
 
-/* cartes check */
-.entree__infos {
+/* plat */
+.plat1,
+.plat2,
+.plat3 {
   display: flex;
-  padding: 10px;
   justify-content: space-between;
-}
-.entree__infos__txt__prix {
-  margin-top: auto;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px lightgrey;
+  margin-top: 20px;
+  height: 4.5rem;
 }
 
-/* plat */
-.menu__main__plat {
-  display: flex;
-  flex-direction: column;
+.menu__plat {
+  position: relative;
+  margin: 0px 15px 30px 15px;
 }
 
 .plat {
@@ -535,21 +501,78 @@ main {
   background-color: white;
   margin: 1rem;
   box-shadow: 2px 2px 2px lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plat__prix {
+  font-weight: bold;
+  padding: 38px 15px 0 15px;
 }
 
-.plat__infos {
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
+/* cartes check PLAT */
+.plat:hover > .plat__check {
+  flex: 10%;
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
 }
-.plat__infos__txt__prix {
-  margin-top: auto;
+
+.plat:hover > .plat__check {
+  flex: 5%;
+}
+
+.plat__check {
+  overflow: hidden;
+  text-align: center;
+  background: #99E2D0;
+  width: 0;
+  align-items: center;
+  transition: 0.5s;
+  padding-top: 25px;
+}
+
+.plat1:hover .plat__check {
+  width: 70px;
+}
+
+.plat2:hover .plat__check {
+  width: 70px;
+}
+
+.plat3:hover .plat__check {
+  width: 70px;
+}
+
+.valid {
+  display: inline-block;
+  margin: auto;
+  color: #fff;
+  font-size: 25px;
 }
 
 /* dessert */
-.menu__main__dessert {
+.dessert1,
+.dessert2,
+.dessert3 {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px lightgrey;
+  margin-top: 20px;
+  height: 4.5rem;
+}
+
+.menu__dessert {
+  position: relative;
+  margin: 0px 15px 30px 15px;
 }
 
 .dessert {
@@ -557,6 +580,58 @@ main {
   background-color: white;
   margin: 1rem;
   box-shadow: 2px 2px 2px lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dessert__prix {
+  font-weight: bold;
+  padding: 38px 15px 0 15px;
+}
+
+/* cartes check DESSERT */
+.dessert:hover > .dessert__check {
+  flex: 10%;
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
+}
+
+.dessert:hover > .dessert__check {
+  flex: 5%;
+}
+
+.dessert__check {
+  overflow: hidden;
+  text-align: center;
+  background: #99E2D0;
+  width: 0;
+  align-items: center;
+  transition: 0.5s;
+  padding-top: 25px;
+}
+
+.dessert1:hover .dessert__check {
+  width: 70px;
+}
+
+.dessert2:hover .dessert__check {
+  width: 70px;
+}
+
+.dessert3:hover .dessert__check {
+  width: 70px;
+}
+
+.valid {
+  display: inline-block;
+  margin: auto;
+  color: #fff;
+  font-size: 25px;
 }
 
 /* bouton commander */
