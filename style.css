@@ -114,11 +114,18 @@ main .ville i {
   margin-left: -35px;
   margin-top: 2px;
 }
+.formulaire li::before__icon {
+  color: #9356DC;
+}
 .formulaire li:hover {
   transform: scale(1.04);
 }
 .formulaire__icon {
   color: #7e7e7e;
+}
+
+.formulaire__list:hover i {
+  color: #9356DC;
 }
 
 .ville {
@@ -634,7 +641,7 @@ main {
 
 /* coeur page */
 .fa-stack {
-  font-size: x-large;
+  font-size: 1.5rem;
   position: relative;
   width: 2.5em;
 }
@@ -647,7 +654,7 @@ main {
 .fa-stack :nth-child(2):hover {
   background: linear-gradient(to bottom left, #9356DC, #FF79DA);
   font-size: large;
-  transform: scale(2);
+  transform: scale(1.6);
   background-clip: text;
   -webkit-background-clip: text;
 }

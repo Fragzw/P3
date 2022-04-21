@@ -32,6 +32,9 @@ main {
             position: absolute;
             margin-left: -35px;
             margin-top: 2px;
+            &__icon {
+                color: #9356DC;
+            }
         }
         list-style-type: none;
         background-color: #f6f6f6;
@@ -48,6 +51,9 @@ main {
     &__icon {
         color: #7e7e7e;
     }
+}
+.formulaire__list:hover i{
+    color: #9356DC;
 }
 
 .ville {
