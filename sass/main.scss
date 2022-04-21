@@ -11,7 +11,7 @@ main {
     position: relative;
     counter-reset: numbers;
     text-align: start;
-    padding: 2rem 1rem;
+    background-color: #f6f6f6;
     & ol {
         display: flex;
         gap: 1rem;
