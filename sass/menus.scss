@@ -19,7 +19,7 @@
     height: fit-content;
     overflow: hidden;
     width: 90vw;
-    padding: f0px;
+    padding: 0px;
     &__img {
       position: relative;
       width: 90vw;
@@ -75,9 +75,6 @@
     }
   }
 
-.card:hover {
-  transform: scale(1.04);
-}
 .section_restaurant__cards {
   padding-bottom: 50px;
 }

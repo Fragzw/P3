@@ -342,7 +342,7 @@ main {
     border: unset;
     cursor: pointer;
     @include base-shadow;
-    transition: transform 0.3 s;
+    transition: transform 0.3s;
 }
 
 .btn__commander:hover {

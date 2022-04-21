@@ -14,5 +14,6 @@
     background: linear-gradient(to bottom left, $color-primary, $color-secondary );
     font-size: large;
     transform: scale(2);
+    background-clip: text;
     -webkit-background-clip: text;
 }

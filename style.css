@@ -20,6 +20,7 @@ a {
   width: 450px;
 }
 
+/* heart */
 .footer {
   background-color: #353535;
   padding: 1rem 2rem;
@@ -204,7 +205,7 @@ main .ville i {
   padding: 0.8rem 1rem;
   border: 0px;
   box-shadow: 2px 4px 8px -3px black;
-  transition: transform 0.3 s;
+  transition: transform 0.3s;
 }
 
 .restaurant__btn:hover {
@@ -237,7 +238,7 @@ main .ville i {
   height: fit-content;
   overflow: hidden;
   width: 90vw;
-  padding: f0px;
+  padding: 0px;
 }
 .card__img {
   position: relative;
@@ -292,10 +293,6 @@ main .ville i {
   padding: 0px;
   position: relative;
   bottom: 10px;
-}
-
-.card:hover {
-  transform: scale(1.04);
 }
 
 .section_restaurant__cards {
@@ -624,7 +621,7 @@ main {
   border: unset;
   cursor: pointer;
   box-shadow: 2px 4px 8px -3px black;
-  transition: transform 0.3 s;
+  transition: transform 0.3s;
 }
 
 .btn__commander:hover {
@@ -651,6 +648,7 @@ main {
   background: linear-gradient(to bottom left, #9356DC, #FF79DA);
   font-size: large;
   transform: scale(2);
+  background-clip: text;
   -webkit-background-clip: text;
 }
 
