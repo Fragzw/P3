@@ -1,4 +1,5 @@
 #pages_body {
+
     .entree__prix,
     .plat__prix,
     .dessert__prix {
@@ -12,6 +13,15 @@
         object-fit: cover;
     }
 }
+
+/* animation logo tcheck */
+
+.fa-check-circle {
+    transform: rotate(359deg);
+    transition: transform 0.7s;
+}
+/* animation logo tcheck */
+
 .header {
     display: flex;
     justify-content: center;
@@ -24,6 +34,7 @@
     padding-bottom: 0px;
     margin-bottom: 10px;
 }
+
 /* visuel titres */
 
 .h4 {
@@ -118,6 +129,7 @@ main {
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
+
     &__prix {
         font-weight: bold;
         padding: 38px 15px 0 15px;
@@ -175,6 +187,14 @@ main {
     font-size: 25px;
 }
 
+.entree1:hover,
+.entree2:hover,
+.entree3:hover {
+    .entree__check>.valid {
+        transform: rotate(0deg);
+    }
+}
+
 /* plat */
 
 .plat1,
@@ -207,9 +227,18 @@ main {
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
+
     &__prix {
         font-weight: bold;
         padding: 38px 15px 0 15px;
+    }
+}
+
+.plat1:hover,
+.plat2:hover,
+.plat3:hover {
+    .plat__check>.valid {
+        transform: rotate(0deg);
     }
 }
 
@@ -290,9 +319,18 @@ main {
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
+
     &__prix {
         font-weight: bold;
         padding: 38px 15px 0 15px;
+    }
+}
+
+.dessert1:hover,
+.dessert2:hover,
+.dessert3:hover {
+    .dessert__check>.valid {
+        transform: rotate(0deg);
     }
 }
 
@@ -391,20 +429,23 @@ main {
 }
 
 @media (min-width:872px) {
+
     .menu__entree,
-    .menu__plat, 
+    .menu__plat,
     .menu__dessert {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 5px 5vw;
     }
-.menu {
-    .menu__titre {
-        display: flex;
-        justify-content: center;
+
+    .menu {
+        .menu__titre {
+            display: flex;
+            justify-content: center;
+        }
     }
-}
+
     .entree1,
     .entree2,
     .entree3,

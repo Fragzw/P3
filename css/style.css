@@ -322,6 +322,13 @@ main .ville i {
   object-fit: cover;
 }
 
+/* animation logo tcheck */
+.fa-check-circle {
+  transform: rotate(359deg);
+  transition: transform 0.7s;
+}
+
+/* animation logo tcheck */
 .header {
   display: flex;
   justify-content: center;
@@ -476,6 +483,12 @@ main {
   font-size: 25px;
 }
 
+.entree1:hover .entree__check > .valid,
+.entree2:hover .entree__check > .valid,
+.entree3:hover .entree__check > .valid {
+  transform: rotate(0deg);
+}
+
 /* plat */
 .plat1,
 .plat2,
@@ -511,6 +524,12 @@ main {
 .plat__prix {
   font-weight: bold;
   padding: 38px 15px 0 15px;
+}
+
+.plat1:hover .plat__check > .valid,
+.plat2:hover .plat__check > .valid,
+.plat3:hover .plat__check > .valid {
+  transform: rotate(0deg);
 }
 
 /* cartes check PLAT */
@@ -590,6 +609,12 @@ main {
 .dessert__prix {
   font-weight: bold;
   padding: 38px 15px 0 15px;
+}
+
+.dessert1:hover .dessert__check > .valid,
+.dessert2:hover .dessert__check > .valid,
+.dessert3:hover .dessert__check > .valid {
+  transform: rotate(0deg);
 }
 
 /* cartes check DESSERT */
