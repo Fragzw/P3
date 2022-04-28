@@ -1,14 +1,12 @@
-@media (max-width: 900px) {
-  .formulaire {
-    & ol {
-      flex-direction: column;
-    }
-  }
-}
-
 @media (min-width: 901px) {
   .formulaire {
     text-align: center;
+    & ol {
+      flex-direction: unset;
+    }
+    &__title {
+      padding-left: 30px;
+    }
   }
 }
 
