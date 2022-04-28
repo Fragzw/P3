@@ -19,10 +19,6 @@ a {
     width: 450px;
 }
 
-/* heart */
-
-
-
 .footer {  
     background-color: $color-footer;
     padding: 1rem 2rem;
@@ -62,7 +58,7 @@ a {
         text-decoration: none;
     
         &:hover {
-          text-decoration: underline;
+          text-decoration: none;
         }
     }
     

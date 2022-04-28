@@ -20,7 +20,6 @@ a {
   width: 450px;
 }
 
-/* heart */
 .footer {
   background-color: #353535;
   padding: 1rem 2rem;
@@ -55,7 +54,7 @@ a {
   text-decoration: none;
 }
 .footer__link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .footer__icon {
   width: 1.2rem;
@@ -312,11 +311,6 @@ main .ville i {
 .card__caption__text h4 {
   margin-top: 0.6rem;
   margin-bottom: 0.2rem;
-}
-.card__caption__hrt {
-  padding: 0px;
-  position: relative;
-  bottom: 10px;
 }
 
 .section_restaurant__cards {
@@ -696,7 +690,7 @@ main {
 
 /* coeur page */
 .fa-stack {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   position: relative;
   width: 2.5em;
 }
@@ -707,9 +701,9 @@ main {
 }
 
 .fa-stack :nth-child(2):hover {
-  background: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  background: linear-gradient(162deg, #9356DC, #FF79DA);
   font-size: large;
-  transform: scale(1.6);
+  transform: scale(1.25);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -759,12 +753,6 @@ main {
     text-align: center;
   }
 }
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 #loader {
   font-family: "shrikhand", "sans-serif";
   height: 100vh;

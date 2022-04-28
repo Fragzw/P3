@@ -11,9 +11,9 @@
 }
 
 @mixin heart-hover {
-    background: linear-gradient(to bottom left, $color-primary, $color-secondary );
+    background: linear-gradient(162deg, $color-primary, $color-secondary );
     font-size: large;
-    transform: scale(1.6);
+    transform: scale(1.25);
     background-clip: text;
     -webkit-background-clip: text;
 }
