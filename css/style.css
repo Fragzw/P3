@@ -150,6 +150,7 @@ main .ville i {
   font-weight: bold;
   border: none;
   width: 8rem;
+  outline: none;
 }
 
 /* input choix de la ville */
@@ -276,7 +277,6 @@ main .ville i {
 }
 .card__img__new {
   font-weight: bold;
-  z-index: 1;
   background-color: #99e2d0;
   color: #1a8a68;
   width: 80px;
@@ -754,18 +754,17 @@ main {
   }
 }
 #loader {
-  font-family: "shrikhand", "sans-serif";
+  position: fixed;
+  background-color: #f3f3f3;
   height: 100vh;
-  background-color: #f3f3f3;
-  height: 100%;
-  width: 100%;
-  background-color: #f3f3f3;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+  animation: desappear 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  /* une fois animation terminée disparait */
+  transform-origin: top;
 }
 
 .accueil h1 {
@@ -788,12 +787,20 @@ main {
 
 .lettre {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   letter-spacing: 5px;
   margin-bottom: 150px;
   animation: defile 1.5s linear infinite;
 }
 
+@keyframes desappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @keyframes defile {
   0% {
     color: #FF79DA;
@@ -802,9 +809,12 @@ main {
     color: #9356DC;
     text-shadow: none;
   }
-  100% {
+  95% {
     color: #FF79DA;
     text-shadow: none;
+  }
+  100% {
+    transform: scale(0);
   }
 }
 .lettre:nth-child(1) {
@@ -845,8 +855,4 @@ main {
 
 .lettre:nth-child(10) {
   animation-delay: 1s;
-}
-
-.finloader {
-  opacity: 0;
 }
