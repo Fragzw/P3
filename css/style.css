@@ -85,7 +85,9 @@ main .ville i {
   position: relative;
   counter-reset: numbers;
   text-align: start;
-  background-color: #f6f6f6;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 .formulaire ol {
   display: flex;
@@ -182,6 +184,7 @@ main .ville i {
 
 @media (min-width: 901px) {
   .formulaire {
+    background-color: #f6f6f6;
     text-align: center;
   }
   .formulaire ol {
@@ -761,6 +764,7 @@ main {
   z-index: 1;
   opacity: 1;
   animation: desappear 0.01s;
+  /* délais de disparition */
   animation-delay: 3s;
   animation-fill-mode: forwards;
   /* une fois animation terminée disparait */

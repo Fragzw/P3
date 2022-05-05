@@ -5,7 +5,7 @@
     inset: 0;
     z-index: 1;
     opacity: 1;
-    animation: desappear 0.01s;
+    animation: desappear 0.01s; /* délais de disparition */
     animation-delay: 3s;
     animation-fill-mode: forwards; /* une fois animation terminée disparait */
     transform-origin: top;
