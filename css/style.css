@@ -108,7 +108,7 @@ main .ville i {
   margin-top: 2px;
 }
 .formulaire li:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 .formulaire__icon {
   color: #7e7e7e;
