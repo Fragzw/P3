@@ -289,9 +289,9 @@ main .ville i {
   right: 1em;
   top: 1em;
   position: absolute;
-  height: 2.5em;
+  height: 33px;
   /* hauteur du parent */
-  line-height: 0.7em;
+  line-height: 0.3em;
   /* hauteur de ligne (identique) */
   white-space: nowrap;
   /* interdiction de passer à la ligne */
@@ -335,7 +335,7 @@ main .ville i {
 
 /* animation logo tcheck */
 .fa-check-circle {
-  transform: rotate(359deg);
+  transform: rotate(-359deg);
   transition: transform 0.7s;
 }
 
@@ -361,7 +361,7 @@ main .ville i {
   margin: 20px 0 0 10px;
 }
 .h4__infos {
-  font-weight: normal;
+  font-weight: 100;
 }
 
 .underline-title {
@@ -445,6 +445,10 @@ main {
 .entree__prix {
   font-weight: bold;
   padding: 38px 15px 0 15px;
+}
+
+.menu__entree__title {
+  font-weight: 300;
 }
 
 /* cartes check ENTREE */
@@ -542,6 +546,10 @@ main {
   transform: rotate(0deg);
 }
 
+.menu__plat__title {
+  font-weight: 300;
+}
+
 /* cartes check PLAT */
 .plat:hover > .plat__check {
   flex: 10%;
@@ -601,7 +609,7 @@ main {
 
 .menu__dessert {
   position: relative;
-  margin: 0px 15px 30px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .dessert {
@@ -625,6 +633,10 @@ main {
 .dessert2:hover .dessert__check > .valid,
 .dessert3:hover .dessert__check > .valid {
   transform: rotate(0deg);
+}
+
+.menu__dessert__title {
+  font-weight: 300;
 }
 
 /* cartes check DESSERT */
@@ -672,10 +684,10 @@ main {
 /* bouton commander */
 .btn__commander {
   color: white;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   text-align: center;
   background: linear-gradient(#FF79DA, #9356DC);
-  margin: 4rem auto;
+  margin: 3rem auto;
   border-radius: 30px;
   border: unset;
   cursor: pointer;
@@ -711,6 +723,55 @@ main {
   -webkit-background-clip: text;
 }
 
+/* arrow back */
+.backLink {
+  position: relative;
+  right: 45px;
+  font-size: x-large;
+  bottom: 5px;
+}
+
+/* animations pages */
+@keyframes appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.delay {
+  animation: slideup 1s forwards;
+  opacity: 0;
+}
+.delay:nth-child(1) {
+  animation-delay: calc(1s / 5);
+}
+.delay:nth-child(2) {
+  animation-delay: calc(2s / 5);
+}
+.delay:nth-child(3) {
+  animation-delay: calc(3s / 5);
+}
+.delay:nth-child(4) {
+  animation-delay: calc(4s / 5);
+}
+.delay:nth-child(5) {
+  animation-delay: calc(5s / 5);
+}
+
+@keyframes slideup {
+  from {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  to {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
 /* media queries */
 @media (max-width: 450px) {
   body {
@@ -722,10 +783,10 @@ main {
   .menu__entree,
 .menu__plat,
 .menu__dessert {
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px 5vw;
+    margin: 0px 15px 30px 60px;
   }
 
   .menu .menu__titre {
@@ -754,6 +815,10 @@ main {
 
   .footer {
     text-align: center;
+  }
+
+  #pages_body main img {
+    height: 60vh;
   }
 }
 #loader {
