@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.section_restaurants {
+  padding: 0 5vw;
+  background-color: #f6f6f6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_restaurants__title {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  padding-top: 40px;
+}
+
+.card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  margin: 3vw 0px 15px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px lightgray;
+          box-shadow: 2px 2px 2px lightgray;
+  border-radius: 20px 20px;
+  height: fit-content;
+  overflow: hidden;
+  width: 90vw;
+  padding: 0px;
+}
+
+.card__img {
+  position: relative;
+  width: 90vw;
+}
+
+.card__img img {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+
+.card__img__new {
+  font-weight: bold;
+  background-color: #99e2d0;
+  color: #1a8a68;
+  width: 80px;
+  display: block;
+  text-align: center;
+  right: 1em;
+  top: 1em;
+  position: absolute;
+  height: 33px;
+  /* hauteur du parent */
+  line-height: 0.3em;
+  /* hauteur de ligne (identique) */
+  white-space: nowrap;
+  /* interdiction de passer à la ligne */
+  border-radius: 5%;
+}
+
+.card__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 65px;
+}
+
+.card__caption__text {
+  padding: 0 1rem;
+  border-bottom-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+}
+
+.card__caption__text p {
+  font-weight: lighter;
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.card__caption__text h4 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.section_restaurant__cards {
+  padding-bottom: 50px;
+}
+/*# sourceMappingURL=menus.css.map */

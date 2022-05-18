@@ -318,7 +318,7 @@ main .ville i {
   padding-bottom: 50px;
 }
 
-#pages_body .entree__prix,
+#pages_body .menu__item__prix,
 #pages_body .plat__prix,
 #pages_body .dessert__prix {
   margin: 0;
@@ -406,62 +406,28 @@ main {
 }
 
 /* entrées */
-.entree1,
-.entree2,
-.entree3,
-.entree4 {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 2px 2px 2px lightgrey;
-  margin-top: 20px;
-  height: 4.5rem;
-}
-
 .menu__entree {
   position: relative;
   margin: 0px 15px 30px 15px;
 }
 
 /* inspecter voir quoi changer */
-.entree {
-  border-radius: 20px;
+.menu__item {
+  border-radius: 15px;
   background-color: white;
-  margin: 1rem;
+  margin-top: 20px;
   box-shadow: 2px 2px 2px lightgrey;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
-  text-overflow: ellipsis;
+  height: 4.5rem;
 }
-.entree__prix {
+.menu__item__prix {
   font-weight: bold;
   padding: 38px 15px 0 15px;
 }
-
-.menu__entree__title {
-  font-weight: 300;
-}
-
-/* cartes check ENTREE */
-.entree:hover > .entree__check {
-  flex: 10%;
-  transform: translateX(0px);
-  background-color: #99e2d0;
-  cursor: pointer;
-  color: #f6f6f6;
-}
-
-.entree:hover > .entree__check {
-  flex: 5%;
-}
-
-.entree__check {
+.menu__item__check {
   overflow: hidden;
   text-align: center;
   background: #99E2D0;
@@ -471,19 +437,19 @@ main {
   padding-top: 25px;
 }
 
-.entree1:hover .entree__check {
-  width: 70px;
+.menu__entree__title {
+  font-weight: 300;
 }
 
-.entree2:hover .entree__check {
-  width: 70px;
+/* cartes check ENTREE */
+.menu__item:hover > .menu__item__check {
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
 }
 
-.entree3:hover .entree__check {
-  width: 70px;
-}
-
-.entree4:hover .entree__check {
+.menu__item:hover .menu__item__check {
   width: 70px;
 }
 
@@ -494,10 +460,7 @@ main {
   font-size: 25px;
 }
 
-.entree1:hover .entree__check > .valid,
-.entree2:hover .entree__check > .valid,
-.entree3:hover .entree__check > .valid,
-.entree4:hover .entree__check > .valid {
+.menu__item:hover .menu__item__check > .valid {
   transform: rotate(0deg);
 }
 
@@ -792,10 +755,7 @@ main {
     justify-content: center;
   }
 
-  .entree1,
-.entree2,
-.entree3,
-.entree4 {
+  .menu__item {
     width: 95%;
   }
 
